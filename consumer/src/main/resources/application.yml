@@ -1,0 +1,32 @@
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+logging:
+  level:
+    org.springframework: INFO
+    com.ibatis: INFO
+
+spring:
+  application:
+    name: soa-consumer-service
+
+server:
+  tomcat:
+    accesslog:
+      directory: /logs
+      suffix: .log
+  context-path: /soaconsumerservice
+  port: 8081
+
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://10.100.67.193:8761/eurekaservice/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+

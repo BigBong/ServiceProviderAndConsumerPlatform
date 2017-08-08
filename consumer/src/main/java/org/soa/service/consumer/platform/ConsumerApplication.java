@@ -19,11 +19,11 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 
 @ComponentScan
+@EnableAutoConfiguration
 @EnableEurekaClient
 @EnableHystrix
 @EnableCircuitBreaker
 @EnableFeignClients
-@EnableAutoConfiguration
 @SpringBootApplication
 public class ConsumerApplication extends SpringBootServletInitializer {
 
